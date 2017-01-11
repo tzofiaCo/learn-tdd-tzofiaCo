@@ -7,9 +7,9 @@ Learn Mocha [![Build Status](https://travis-ci.org/jce-il/learn-mocha.png?branch
 
 For students, follow these steps:
 - Fork your own copy of this toutorial (using the classroom invitation)
-- Clone localy
+- Clone localy (if working on a public machine make sure to ```git config``` your usename and email)
 - Follow this tutorial, while commiting your work right after every step.
-- In the commit messages use a prefix of "RED", "GREEN", or "REFACTOR" according to the step, e.g. "RED:a failing test for a missing module"
+- In the commit messages use a prefix of "RED", "GREEN", or "REFACTOR" according to the step, e.g. "RED: a failing test for a missing module"
 - There are colored circle hints following the various steps:
 ![RED](https://raw.github.com/jce-il/learn-mocha/master/images/red-circle-icon.png "RED") ![GREEN](https://raw.github.com/jce-il/learn-mocha/master/images/green-circle-icon.png "GREEN") ![REFACTOR](https://raw.github.com/jce-il/learn-mocha/master/images/blue-circle-icon.png "REFACTOR")
 - Finally, complete your details below, commit and push back to your github tutorial repository
@@ -42,19 +42,15 @@ everything starts breaking ... "*it was working this morning*" ...
 
 ## Installation
 
-Assuming you're in the cloned repository directory
-
-```sh
-npm install mocha -g --save-dev
-```
-
-Alterntively, you can install mocha just locally for this tutorial, by:
+Assuming you're in the cloned repository directory (```cd learn-tdd-username..```)
 
 ```sh
 npm install mocha --save-dev
 ```
 
-You should see some output *confirming* it *installed*:
+(Alterntively, you can install mocha globally, by: ```sh npm install mocha -g --save-dev```)
+
+You should see some output *confirming* it is *installed*:
 
 ![Mocha Installed](https://raw.github.com/jce-il/learn-mocha/master/images/mocha-installed.png "Mocha Installed Successfully")
 
@@ -67,11 +63,11 @@ More info: http://mochajs.org/#installation
 
 #### Try Running Tests
 
-By typing the command **mocha** in your terminal (or 'npm test' for the local option above) the mocha comand line program
+By typing the command ```npm test``` in your terminal (or ```mocha``` if you installed it globally, or running it directly from ```./node_modules/mocha/bin/mocha```) the mocha comand line program
 will look for a **/test** directory and run any **.js** files it contains:
 
 ```sh
-mocha
+npm test
 ```
 
 You should see a failure message, since no tests were found (this is actually a very first failing/RED phase).
@@ -111,10 +107,12 @@ By typing the command **mocha** in your terminal the mocha comand line program
 will look for a **/test** directory and run any **.js** files it contains:
 
 ```sh
-mocha
+npm test
 ```
 
 ![Mocha 1 Test Passes](https://raw.github.com/jce-il/learn-mocha/master/images/mocha-1-test-passing.png "Mocha 1 Test Passes")
+
+(We're not committing this test, since it is just an example, soon to be replaced)
 
 ### A More Useful TDD Example (Cash Register Mini Project)
 
@@ -175,7 +173,7 @@ may seem *strange* ...
 In **T**est **F**irst **D**evelopment (TFD) we write a test *first* and *then*
 write the code that makes the test pass.
 
-so, back in our ./test/**test.js** file add the following line:
+so, back in our ./test/**test.js** file, remove the describe block and add the following line:
 
 ```javascript
 var C = require('../cash.js');  // our module
@@ -204,7 +202,7 @@ For the sake of this tutorial this is already a failure which should be document
 
 #### Create the Module File
 
-Create a new file for our cash register **cash.js**:
+Create a new file for our cash register **cash.js** (in the root directory):
 
 ```sh
 touch cash.js
@@ -375,6 +373,7 @@ C.getChange = function (totalPayable, cashPaid) {
     }
     return change;
 };
+module.exports = C;            // export the module with a single method
 ```
 
 ![GREEN](https://raw.github.com/jce-il/learn-mocha/master/images/green-circle-icon.png "GREEN")
@@ -416,13 +415,17 @@ https://github.com/dwyl/learn-istanbul
 Install istanbul:
 
 ```sh
-npm install istanbul -g
+npm install istanbul --save-dev
 ```
+(or globally, with ```npm install istanbul -g```)
 
 Run the following command to get a coverage report:
+
 ```sh
-istanbul cover _mocha -- -R spec
+./node_modules/.bin/istanbul cover _mocha -- -R spec
 ```
+(or globally, with ```istanbul cover _mocha -- -R spec```)
+
 You should see:
 
 ![Istanbul Coverage](https://raw.github.com/jce-il/learn-mocha/master/images/istanbul-cover-mocha.png "Istanbul Code Coverage")
@@ -458,7 +461,8 @@ Update the link below in the README file, to point to **your** repository status
 #### Pull request
 
 Finally, use the github interface of your own repository to fork it into your account. Then make another development step, e.g. another test or refactoring, commit it to the new repository and then open a pull request to the original repository. 
-![GREEN](https://raw.github.com/jce-il/learn-mocha/master/images/green-circle-icon.png "GREEN")
+
+![REFACTOR](https://raw.github.com/jce-il/learn-mocha/master/images/blue-circle-icon.png "REFACTOR")
 
 ![Open PR](https://raw.github.com/jce-il/learn-mocha/master/images/open-pr.png "Open PR")
 
