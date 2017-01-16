@@ -1,9 +1,12 @@
 var assert = require("assert"); // core module
 var C = require('../cash.js');  // our module
+
 totalPayable = 1487                                 // £14.87  (fourteen pounds and eighty-seven pence)
 cashPaid     = 10000                                // £100.00 (one hundred pounds)
 dfference    = 8513                                 // £85.13
 change       = [5000, 2000, 1000, 500, 10, 2, 1 ]   // £50, £20, £10, £5, 10p, 2p, 1p
+
+
 describe('Cash Register', function(){
   describe('Module C', function(){
     it('should have a getChange Method', function(){
