@@ -12,4 +12,7 @@ describe('Cash Register', function(){
     assert.deepEqual(C.getChange(210,300), [50,20,20]);
     })
   })
+  it('getChange(486,1000) should equal [500, 10, 2, 2]', function(){
+    assert.deepEqual(C.getChange(486,1000), [500, 10, 2, 2]);
+})
 });
