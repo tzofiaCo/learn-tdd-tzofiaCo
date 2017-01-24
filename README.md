@@ -16,13 +16,19 @@ For students, follow these steps:
 
 #### My details:
 
-- Excercise: HW4 - TDD
+- Excercise: HW4 - TDD Development
 - Name: Tzofia Cohen 
 - ID#:204554372
 - github username: tzofiaCo
 - Estimation of hours I worked on it: 1   עשיתי את התרגיל פעם אחת אך היו בו כמה טעויות לכן עשיתי זאת שנית ולכן אבקש להתייחס רק לשינויים האחרונים.תודה רבה!!  
+<<<<<<< HEAD
 (the latest 12 commits)
 - Link to travis : https://travis-ci.org/jce-il/learn-mocha  
+=======
+(the latest 12 commits)  
+
+
+>>>>>>> d5081a4b1d2cf418109fdce45b7a238b2b881674
 
 If you have an improvement suggestion or a bug fix for this tutorial, please open an issue [here](https://github.com/jce-il/learn-mocha/issues) or send a PR with a fix.
 
