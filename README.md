@@ -21,14 +21,13 @@ For students, follow these steps:
 - ID#:204554372
 - github username: tzofiaCo
 - Estimation of hours I worked on it: 1   עשיתי את התרגיל פעם אחת אך היו בו כמה טעויות לכן עשיתי זאת שנית ולכן אבקש להתייחס רק לשינויים האחרונים.תודה רבה!!  
-<<<<<<< HEAD
 (the latest 12 commits)
 - Link to travis : https://travis-ci.org/jce-il/learn-mocha  
-=======
-(the latest 12 commits)  
+-הערה:  
+בהנחיות התרגיל היה כתוב לעשות pull-request
+ואח"כ push
+עשיתי כך אבל הסדר הוא הפוך וזה עשה לי המום בעיות,ניסתי לתקן זאת ולכן יש הרבה קומיטים שאינם קשורים... 
 
-
->>>>>>> d5081a4b1d2cf418109fdce45b7a238b2b881674
 
 If you have an improvement suggestion or a bug fix for this tutorial, please open an issue [here](https://github.com/jce-il/learn-mocha/issues) or send a PR with a fix.
 
